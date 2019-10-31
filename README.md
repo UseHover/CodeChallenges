@@ -1,2 +1,33 @@
-# CodeChallenges
-Readme's for each of Hover's recruiting code sample questions
+# Hover Recruitment Code Challenge
+
+Thank you for taking the time to complete this challenge. 
+
+## Task requirements
+
+- Feel free to spend as much time on this as you like, the time you spend working on it and how it long it takes you to submit are NOT considered in the review. It is meant to take 4-8 hours to complete and we recommend not taking more than a week to submit it. You may use any internet sources.
+- Complete the user stories below
+- You may use any dependencies you like
+- When finished, ZIP the code and share it with us. It does not need to contain a built APK, but we must be able to build the APK from source using gradle without any errors.
+- The Hover team is standing by to provide technical support if neccessary
+
+## Problem statement
+
+Hover's technology requires identifying SIM cards so that the correct USSD and SIM Toolkit services are run on the right networks. There is no official and always up-to-date record of networks in every country, so it would be helpful to compare what a user's SIM card is reporting vs what information Hover has listed.
+
+The Hover Android SDK has a dual-sim library built into it (we are in the process of separating and open-sourcing it). It simplifies getting SIM info across different devices and Android versions, even for dual SIM. The main API call you need is `Hover.getPresentSims(context)` which returns a list of POJO SimInfo objects. Documentation for them can be found in the javadoc.
+
+Hover also provides its list of network operators via an HTTP API. http://localhost:3000/api/world_operators
+
+## User stories
+
+- As a user I want to see the info reported about my SIM cards
+- As a user I want to compare what Android/the Hover SDK is reporting to what Hover's operator list thinks my SIM card is
+- As a user I want to submit a request to update the information for my SIM card. There is no real url for this, but just assume you are delivering some JSON to an endpoint.
+
+## Acceptance criteria
+
+- Does your solution fully meet the user requirements and are any edge cases or errors handled.
+- Does your code show mastery of basic object oriented design and clean code principles.
+- Test coverage and type
+- Documentation
+- You will not be graded on UI/UX (that is what designers are for!) but basic readability of the interface is still important
