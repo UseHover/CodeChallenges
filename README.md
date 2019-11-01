@@ -14,20 +14,21 @@ Thank you for taking the time to complete this challenge.
 
 Hover's technology requires identifying SIM cards so that the correct USSD and SIM Toolkit services are run on the right networks. There is no official and always up-to-date record of networks in every country, so it would be helpful to compare what a user's SIM card is reporting vs what information Hover has listed.
 
-The Hover Android SDK has a dual-sim library built into it (we are in the process of separating and open-sourcing it). It simplifies getting SIM info across different devices and Android versions, even for dual SIM. The main API call you need is `Hover.getPresentSims(context)` which returns a list of POJO SimInfo objects. Documentation for them can be found in the javadoc.
+The Hover Android SDK has a dual-sim library built into it (we are in the process of [separating and open-sourcing it](https://github.com/UseHover/MultiSim)). It simplifies getting SIM info across different devices and Android versions, especially on dual SIM devices. The main API call you need is `Hover.getPresentSims(context)` which returns a list of POJO SimInfo objects. Documentation for them can be found in the [javadoc](http://maven.usehover.com/releases/com/hover/android-sdk/1.4.1/android-sdk-1.4.1-javadoc.jar).
 
-Hover also provides its list of network operators via an HTTP API. http://localhost:3000/api/world_operators
+Hover also provides its list of network operators via a public HTTP API. http://localhost:3000/api/world_operators
 
 ## User stories
 
 - As a user I want to see the info reported about my SIM cards
 - As a user I want to compare what Android/the Hover SDK is reporting to what Hover's operator list thinks my SIM card is
-- As a user I want to submit a request to update the information for my SIM card. There is no real url for this, but just assume you are delivering some JSON to an endpoint.
+- As a user I want to submit a request to update the information for my SIM card. 
+  - There is no real url for this, but just assume you are delivering some JSON to an endpoint. The JSON schema should make sense and provide the neccessary info.
 
 ## Acceptance criteria
 
 - Does your solution fully meet the user requirements and are any edge cases or errors handled.
 - Does your code show mastery of basic object oriented design and clean code principles.
-- Test coverage and type
+- Test coverage
 - Documentation
 - You will not be graded on UI/UX (that is what designers are for!) but basic readability of the interface is still important
