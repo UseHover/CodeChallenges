@@ -7,7 +7,7 @@ Thank you for taking the time to complete this challenge.
 - Feel free to spend as much time on this as you like, the time you spend working on it and how it long it takes you to submit are NOT considered in the review. It is meant to take 4-8 hours to complete and we recommend not taking more than a week to submit it. You may use any internet sources.
 - Complete the user stories below
 - You may use any dependencies you like
-- When finished, ZIP the code and share it with us. It does not need to contain a built APK, but we must be able to build the APK from source using gradle without any errors.
+- When finished, ZIP the code and share it with us. It does not need to contain a built APK, but we must be able to build the APK from source using gradle without any errors. Please do not share publicly on Github.
 - The Hover team is standing by to provide technical support if neccessary
 
 ## Problem statement
@@ -55,4 +55,4 @@ Hover provides its list of network operators via a public HTTP API: https://www.
 - Does your code show mastery of basic object oriented design and clean code principles.
 - Test coverage
 - Documentation
-- You will not be graded on UI/UX (that is what designers are for!) but basic readability of the interface is still important
+- You will not be graded on UI/UX (That is what designers are for!) but basic readability of the interface is still important.
