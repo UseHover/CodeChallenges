@@ -38,14 +38,14 @@ dependencies {
 }
 </code></pre></figure>
 
-Get the READ_PHONE_STATE and CALL_PHONE (you must have both) permissions from the user, then call `Hover.updateSimInfo(context)` which will populate the library's SIM database. This is async and can take a few seconds, and when it is finished it fires a LocalBroadcast with the action `YOUR.PACKAGE.NAME.NEW_SIM_INFO_ACTION`. Then you can use the static methods on the SimInfo object to load them from the database. More documentation can be found in the [javadoc](http://maven.usehover.com/releases/com/hover/android-sdk/1.4.1/android-sdk-1.4.1-javadoc.jar).
+Get the READ_PHONE_STATE and CALL_PHONE permissions (you must have both) from the user, then call `Hover.updateSimInfo(context)` which will populate the library's SIM database. This is async and can take a few seconds, and when it is finished it fires a LocalBroadcast with the action `YOUR.PACKAGE.NAME.NEW_SIM_INFO_ACTION`. Then you can use the static methods on the SimInfo object to load them from the database. More documentation can be found in the [javadoc](http://maven.usehover.com/releases/com/hover/android-sdk/1.4.1/android-sdk-1.4.1-javadoc.jar).
 
 Hover provides its list of network operators via a public HTTP API: https://www.usehover.com/api/world_operators. This endpoint provides the name, country alpha2, mobile country code (MCC) and mobile network codes (MNCs) of each network. The MCC + MNC together are called the Home Network Identifier (HNI) and are also the first 5-6 digits of the IMSI. One network can have multiple MNCs, [Wikipedia](https://en.wikipedia.org/wiki/Mobile_country_code) has a useful summary and list. Hover also provides a list of countries for completeness: https://www.usehover.com/api/countries.
 
 ## User stories
 
-- As a user I want to see in my app which SIM card(s) are present in my device.
-- As a user I want to compare what the MultiSim library is reporting to what Hover's network list reports as the name and country of my SIM card.
+- As a user I want to see which SIM card(s) are present in my device in my app.
+- As a user I want to compare what the MultiSim library is reporting to what Hover's network list reports as the name and country of my SIM card(s).
 - As a user I want to submit a request to update the network name for my SIM card. 
   - There is no real url for this, but just assume you are delivering some JSON to an endpoint. The JSON schema should make sense and provide the neccessary info to understand what the user thinks the network should be as well as what the phone is reporting.
 
