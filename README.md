@@ -40,7 +40,7 @@ dependencies {
 
 Get the READ_PHONE_STATE permission from the user, then call `Hover.updateSimInfo(context)` which will populate the library's SIM database. Then you can use the static methods on the SimInfo object to load them from the database. Documentation can be found in the [javadoc](http://maven.usehover.com/releases/com/hover/android-sdk/1.4.1/android-sdk-1.4.1-javadoc.jar).
 
-Hover provides its list of network operators via a public HTTP API: https://www.usehover.com/api/world_operators. This endpoint provides the name, country alpha2, mobile country code (MCC) and mobile network codes (MNCs) of each network. The MCC + MNC together are called the Home Network Identifier (HNI) and are also the first 5-6 digits of the IMSI. [Wikipedia](https://en.wikipedia.org/wiki/Mobile_country_code) has a useful summary and list. Hover also provides a list of countries for completeness: https://www.usehover.com/api/countries.
+Hover provides its list of network operators via a public HTTP API: https://www.usehover.com/api/world_operators. This endpoint provides the name, country alpha2, mobile country code (MCC) and mobile network codes (MNCs) of each network. The MCC + MNC together are called the Home Network Identifier (HNI) and are also the first 5-6 digits of the IMSI. One network can have multiple MNCs, [Wikipedia](https://en.wikipedia.org/wiki/Mobile_country_code) has a useful summary and list. Hover also provides a list of countries for completeness: https://www.usehover.com/api/countries.
 
 ## User stories
 
