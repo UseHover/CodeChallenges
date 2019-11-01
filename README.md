@@ -14,9 +14,9 @@ Thank you for taking the time to complete this challenge.
 
 Hover's technology requires identifying SIM cards so that the correct USSD and SIM Toolkit services are run on the right networks. There is no official and always up-to-date record of networks in every country, so it would be helpful to compare what a user's SIM card is reporting vs what information Hover has listed.
 
-The Hover Android SDK has a dual-sim library built into it (we are in the process of [separating and open-sourcing it](https://github.com/UseHover/MultiSim)). It simplifies getting SIM info across different devices and Android versions, especially on dual SIM devices. 
+The Hover Android SDK has a dual-SIM library built into it (we are in the process of [separating and open-sourcing it](https://github.com/UseHover/MultiSim)). It simplifies getting SIM info across different devices and Android versions, especially on dual SIM devices. For this exercise assume that the information it gives is accurate: you do NOT need to test yourself on a dual SIM device.
 
-For now is easiest to use through the Hover SDK. You don't need a Hover account, just include the following in your app:
+For now it is easiest to use through the Hover SDK. You don't need a Hover account, just include the following in your app:
 
 1. Add the Hover repo to your root build.gradle repositories:
 <figure><pre><code>
@@ -40,14 +40,14 @@ dependencies {
 
 Get the READ_PHONE_STATE permission from the user, then call `Hover.updateSimInfo(context)` which will populate the library's SIM database. Then you can use the static methods on the SimInfo object to load them from the database. Documentation can be found in the [javadoc](http://maven.usehover.com/releases/com/hover/android-sdk/1.4.1/android-sdk-1.4.1-javadoc.jar).
 
-Hover provides its list of network operators via a public HTTP API: https://www.usehover.com/api/world_operators. This endpoint provides the name, country, mobile country code (MCC) and mobile network codes (MNCs) of each network. The MCC + MNC together are called the Home Network Identifier (HNI) and are also the first 5-6 digits of the IMSI. [Wikipedia]{https://en.wikipedia.org/wiki/Mobile_country_code) has a useful summary and list. Hover also provides a list of countries for completeness: https://www.usehover.com/api/countries.
+Hover provides its list of network operators via a public HTTP API: https://www.usehover.com/api/world_operators. This endpoint provides the name, country alpha2, mobile country code (MCC) and mobile network codes (MNCs) of each network. The MCC + MNC together are called the Home Network Identifier (HNI) and are also the first 5-6 digits of the IMSI. [Wikipedia]{https://en.wikipedia.org/wiki/Mobile_country_code) has a useful summary and list. Hover also provides a list of countries for completeness: https://www.usehover.com/api/countries.
 
 ## User stories
 
-- As a user I want to see the info reported about my SIM cards
-- As a user I want to compare what Android/the Hover SDK is reporting to what Hover's operator list thinks my SIM card is
+- As a user I want to see in my app which SIM card(s) are present in my device.
+- As a user I want to compare what the MultiSim library is reporting to what Hover's network list reports as the name and country of my SIM card.
 - As a user I want to submit a request to update the information for my SIM card. 
-  - There is no real url for this, but just assume you are delivering some JSON to an endpoint. The JSON schema should make sense and provide the neccessary info.
+  - There is no real url for this, but just assume you are delivering some JSON to an endpoint. The JSON schema should make sense and provide the neccessary info to understand what the user thinks the network should be as well as what the phone is reporting.
 
 ## Acceptance criteria
 
