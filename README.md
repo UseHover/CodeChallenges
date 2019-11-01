@@ -4,9 +4,9 @@ Thank you for taking the time to complete this challenge.
 
 ## Task requirements
 
-- Feel free to spend as much time on this as you like, the time you spend working on it and how it long it takes you to submit are NOT considered in the review. It is meant to take 4-8 hours to complete and we recommend not taking more than a week to submit it. You may use any internet sources.
+- Feel free to spend as much time on this as you like, the time you spend working on it and how it long it takes you to submit are NOT considered in the review. It is meant to take 4-8 hours to complete and we recommend not taking more than about a week to submit it. You may use any internet sources.
 - Complete the user stories below
-- You may use any dependencies you like
+- You may use any dependencies or languages you like
 - When finished, ZIP the code and share it with us. It does not need to contain a built APK, but we must be able to build the APK from source using gradle without any errors. Please do not share publicly on Github.
 - The Hover team is standing by to provide technical support if neccessary
 
@@ -46,7 +46,7 @@ Hover provides its list of network operators via a public HTTP API: https://www.
 
 - As a user I want to see in my app which SIM card(s) are present in my device.
 - As a user I want to compare what the MultiSim library is reporting to what Hover's network list reports as the name and country of my SIM card.
-- As a user I want to submit a request to update the information for my SIM card. 
+- As a user I want to submit a request to update the network name for my SIM card. 
   - There is no real url for this, but just assume you are delivering some JSON to an endpoint. The JSON schema should make sense and provide the neccessary info to understand what the user thinks the network should be as well as what the phone is reporting.
 
 ## Acceptance criteria
