@@ -48,7 +48,7 @@ Hover provides its list of network operators via a public HTTP API: https://www.
 2. As a user I want to compare what the MultiSim library is reporting to what Hover's network list reports as the name and country of my SIM card(s).
 3. **Bonus**: As a user I want to submit a request to update the network name for my SIM card. 
   - There is no real url for this, but just assume you are delivering some JSON to an endpoint. The JSON schema should make sense and provide the neccessary info to understand what the user thinks the network should be as well as what the phone is reporting.
-  - We would rather see the first two stories complete than all three stories complete but without essential parts like tests.
+  - We would rather see the first two stories 100% complete than all three stories mostly complete but without essential parts like tests.
 
 ## Acceptance criteria
 
