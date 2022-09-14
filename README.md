@@ -4,7 +4,7 @@ Thank you for taking the time to complete this challenge.
 
 ## Task requirements
 
-- Feel free to spend as much time on this as you like, the time you spend working on it and how it long it takes you to submit are NOT considered in the review. It is meant to take 4-8 hours to complete and we recommend not taking more than about a week to submit it. You may use any internet sources.
+- Feel free to spend as much time on this as you like, the time you spend working on it and how it long it takes you to submit are NOT considered in the review. It is meant to take 4-8 hours to complete. We recommend not taking more than about a week to submit it. You may use any internet sources.
 - Complete the user stories below
 - You may use any dependencies or languages you like
 - When finished, ZIP the code and share it with us. It does not need to contain a built APK, but we must be able to build the APK from source using gradle without any errors. Please do not share publicly on Github.
